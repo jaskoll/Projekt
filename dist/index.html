@@ -1,29 +1,105 @@
 <!doctype html>
 
-<html class="no-js" lang="en">
+<html class="no-js" lang="pl">
 
   <head>
+  <style>
+  SPAN.searchword { background-color:yellow; }
+
+</style>
+<script src="http://links.tedpavlic.com/js/searchhi.js" type="text/javascript" language="JavaScript"></script>
+<script language="JavaScript">
+  function loadSearchHighlight()
+  {
+    SearchHighlight();
+    document.searchhi.h.value = searchhi_string;
+    if( location.hash.length > 1 ) location.hash = location.hash;
+  }
+
+</script>
+  <style media="screen" type="text/css">
+
+  $(document).foundation();
+
+</style>
+  <style media="screen" type="text/css">
+
+  .sticky {
+    width: 100%;
+  }
+  .div_text_shadow
+  {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background-color: rgb(227, 220, 220);
+  text-shadow: rgb(71, 71, 71) 3px 5px 2px;
+  }
+</style>
+
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>CrawlerMakers</title>
     <link rel="stylesheet" href="assets/css/app.css">
   </head>
 <div style="background-image: url(http://img.pixady.com/2017/05/956895_congruentpentagon.png)">
 
-  <body>
+   <body onLoad="JavaScript:loadSearchHighlight();">
+    <div id="page">
+  <div class="top-bar-container" data-sticky-container>
+    <div class="sticky" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+      <div class="top-bar">
+        <div class="row column">
+          <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li class="menu-text">CrawlerMakers</li>
+              <li><a href="#">Strona Główna</a></li>
+              <li class="has-submenu">
+                <a href="#">Nawigacja</a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <li><a href="file:///home/jakub/Projekt/dist/index.html">Statystyki</a></li>
+                  <li><a href="https://www.google.pl/maps/place/Wroc%C5%82aw/data=!4m2!3m1!1s0x470fe9c2d4b58abf:0xb70956aec205e0f5?sa=X&ved=0ahUKEwjGrqfpoonUAhVMIJoKHVMjCBYQ8gEIJzAA">Mapa</a></li>
+                  <li><a href="http://www.wroclawcitytour.pl/">Przewodnik</a></li>
+                  <li><a href="https://jakdojade.pl/wroclaw/trasa/">JakDojade</a></li>
+                </ul>
+              </li>
+
+
+            </ul>
+          </div>
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li>
+                <form accept-charset="ISO-8859-1" method="get" name="searchhi"/>
+                <form method="get" name="searchhi">
+                <input type="text" name="h" placeholder="Search"/>
+              </li>
+              <li>
+
+                <button type="submit" class="button">Search</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <div class="row">
+      <div class="small-2 large-2 columns">  <br><img src="http://mojelowy.pl/img/stats.png" height="128" width="128"/></div>
+        <div class="small-4 large-3 columns">  <h3><font size="6"><b>Statystyki</b> </h3></font></font><p>W poniższym widoku możesz porównać ceny z pięciu dzielnic Wrocławia!</p></div>
+        <div class="small-6 large-4 columns"></div>
 
 
-          <h3><font size="8"></b>Statystyki</b> </h3></font></font>
-          <p><font face="Calibri">W poniższym widoku możesz porównać ceny z pięciu dzielnic Wrocławia!</p></font>
-   </div>
+
+
+   <hr></div>
         <div class="row">
   <div class="large-3 columns">
   </div>
   <div class="large-6 columns">
-    <p><font size="6">Wrocław</font><form action="/action_page.php">
+    <p><font size="4"><b>Wrocław</b></font><form action="/action_page.php"><br><br>
     <font size="2">Cena/m²: <input style="height:40px; width:120px" type="text" name="cena_wroclaw" size="4" value="50,24PLN" readonly>
     </form></p></font>
   </div>
@@ -33,7 +109,7 @@
           <div class="row">
 
             <div class="small-4 large-4 columns">
-              <p><font size="6">Krzyki</font><form action="/action_page.php">
+              <p><font size="4"><b>Krzyki</b></font><form action="/action_page.php">
   <font size="2">Cena/m²: <input style="height:40px; width:120px" type="text" name="cena_krzyki" value="43,21PLN" readonly>
   </form></p></font>
               <img src="http://www.polskaatrakcyjna.pl/core/file/image/13895/custom:640x480/image.png"/>
@@ -44,7 +120,7 @@
                 W dzielnicy znajduje się między innymi Aquapark, Dworzec PKP.</font></p>
             </div>
             <div class="small-4 large-4 columns">
-              <p><font size="6">Śródmieście</font></font><form action="/action_page.php">
+              <p><font size="4"><b>Śródmieście</b></font></font><form action="/action_page.php">
   <font size="2">Cena/m²: <input style="height:40px; width:120px" type="text" name="cena_srodm" value="24,12PLN" readonly>
   </form></p></font>
               <img src="http://www.globtroter.pl/zdjecia/polska/101331_polska_dolny_slask_wroclaw_ostrow_tumski_katedra_sw_jana_chrzciclela.jpg"/>
@@ -55,7 +131,7 @@
                  Wschodnią część Śródmieścia stanowi Wielka Wyspa z osiedlami: Zacisze, Sępolno, Zalesie, Biskupin.</font></p>
             </div>
             <div class="small-4 large-4 columns">
-              <p><font size="6">Stare Miasto</font><form action="/action_page.php">
+              <p><font size="4"><b>Stare Miasto</b></font><form action="/action_page.php">
   <font size="2">Cena/m²: <input style="height:40px; width:120px" type="text" name="cena_stare" value="70,21PLN" readonly>
   </form></p></font>
               <img src="http://www.yougo.pl/uploads/photos/5573e2e999_ratusz-wroclaw_640x480xs.JPG"/>
@@ -70,7 +146,7 @@
           </div>
           <div class="row">
             <div class="small-4 large-4 columns">
-              <p><font size="6">Fabryczna</font><form action="/action_page.php">
+              <p><font size="4"><b>Fabryczna</b></font><form action="/action_page.php">
   <font size="2">Cena/m²: <input style="height:40px; width:120px" type="text" name="cena_fabryczna" value="28,87PLN" readonly>
   </form></p></font>
               <img src="http://www.wroclaw.pl/files/czas%20wolny/Kozanow/20.JPG"/>
@@ -81,7 +157,7 @@
             </font></p>
           </div>
               <div class="small-4 large-4 columns">
-                <p><font size="6">Psie Pole</font><form action="/action_page.php">
+                <p><font size="4"><b>Psie Pole</b></font><form action="/action_page.php">
     <font size="2">Cena/m²: <input style="height:40px; width:120px" type="text" name="cena_psie" value="15,75PLN" readonly>
     </form></p></font>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Wroclaw_Psie_Pole_Rynek.jpg/640px-Wroclaw_Psie_Pole_Rynek.jpg"/>
